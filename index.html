@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: monospace;
+      background: linear-gradient(135deg, #1a0000, #8b0000);
+      color: #0f0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      border: 2px solid #0f0;
+      width: 320px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background: black;
+      border: 1px solid #0f0;
+      color: #0f0;
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid #0f0;
+      padding: 10px;
+      width: 100%;
+      color: #0f0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #prank {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      color: red;
+      font-size: 30px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container" id="login-box">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="triggerPrank()">Log In</button>
+  </div>
+
+  <div id="prank">
+    TANGINA MO, KUPAL! 😈
+  </div>
+
+  <script>
+    function triggerPrank() {
+      document.getElementById("login-box").style.display = "none";
+      document.getElementById("prank").style.display = "flex";
+    }
+  </script>
+
+</body>
+</html>
